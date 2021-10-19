@@ -22,6 +22,7 @@
   <name>Arrow Flight GRPC</name>
   <description>(Experimental)Contains utility class to expose Flight gRPC service and client</description>
   <packaging>jar</packaging>
+  <version>5.0.0-fix</version>
 
   <properties>
     <dep.grpc.version>1.30.2</dep.grpc.version>
@@ -33,7 +34,7 @@
     <dependency>
       <groupId>org.apache.arrow</groupId>
       <artifactId>flight-core</artifactId>
-      <version>${project.version}</version>
+      <version>5.0.0</version>
       <exclusions>
         <exclusion>
           <groupId>io.netty</groupId>
@@ -62,13 +63,13 @@
     <dependency>
       <groupId>org.apache.arrow</groupId>
       <artifactId>arrow-memory-core</artifactId>
-      <version>${project.version}</version>
+      <version>5.0.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
        <groupId>org.apache.arrow</groupId>
        <artifactId>arrow-memory-netty</artifactId>
-       <version>${project.version}</version>
+       <version>5.0.0</version>
        <scope>runtime</scope>
      </dependency>
      <dependency>
