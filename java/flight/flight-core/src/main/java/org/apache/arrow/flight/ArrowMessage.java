@@ -284,10 +284,10 @@ class ArrowMessage implements AutoCloseable {
       MessageMetadataResult header = null;
       ArrowBuf body = null;
       ArrowBuf appMetadata = null;
-      while (stream.available() > 0) {
-        int tag = readRawVarint32(stream);
+      int firstByte;
+      while ((firstByte = stream.read()) != -1) {
+        int tag = CodedInputStream.readRawVarint32(firstByte, stream);
         switch (tag) {
-
           case DESCRIPTOR_TAG: {
             int size = readRawVarint32(stream);
             byte[] bytes = new byte[size];
