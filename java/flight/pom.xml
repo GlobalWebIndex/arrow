@@ -51,5 +51,14 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-    </build>
+   </build>
+
+   <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>gwi</name>
+     <url>https://maven.pkg.github.com/GlobalWebIndex/arrow</url>
+   </repository>
+   </distributionManagement>
+
 </project>
